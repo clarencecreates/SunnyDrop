@@ -1,0 +1,10 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import Welcome from './Welcome';
+import FloatingApp from './FloatingApp';
+import './styles.css';
+const mode=new URLSearchParams(location.search).get('mode');
+if(mode==='welcome')document.documentElement.classList.add('welcome-root');
+if(mode==='radial'||mode==='popup')document.documentElement.classList.add('floating-root');
+createRoot(document.getElementById('root')!).render(<React.StrictMode>{mode==='welcome'?<Welcome/>:mode==='radial'||mode==='popup'?<FloatingApp mode={mode}/>:<App/>}</React.StrictMode>);

@@ -1,0 +1,1 @@
+{"identifier": "main", "description": "Main workspace window events only", "windows": ["main", "radial", "popup", "welcome"], "permissions": ["core:default", "core:window:allow-start-dragging", "core:window:allow-start-resize-dragging"]}
